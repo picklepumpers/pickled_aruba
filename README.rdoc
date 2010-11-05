@@ -1,0 +1,55 @@
+= pickled_aruba
+
+My own branch of Aruba so I can have needed changes incorporated immediatly. I have features
+I need to add and was waiting till my first pull request was processed but it never was so I
+needed to take control. My additions so far are very minor but I need to be able to use them
+in my apps when I need them. The Aruba project managers are just to busy to actively support
+pull requests.
+
+I'll incorporate main Aruba changes as I need them.
+
+Based on Aruba 2.3.0
+
+== Description
+
+Cucumber steps for driving out command line applications. The command line application can be anything,
+a compiled C program, a Java program, a Perl script - anything.
+
+== Usage
+
+  gem install pickled_aruba
+
+Then, just require the library in one of your ruby files under <tt>features/support</tt>
+
+  require 'pickled_aruba'
+
+You now have a bunch of step definitions that you can use in your features. Look at pickled_aruba/cucumber.rb
+to see all the step definitions. Look at features/*.feature for examples (which are also testing PickledAruba
+itself).
+
+== Getting more output with tags.
+
+PickledAruba has several tags you can use to get more information. You can put these tags on individual scenarios, or on a feature. The tags are:
+
+* <tt>@announce-cmd</tt> - See what command is is run
+* <tt>@announce-stdout</tt> - See the stdout
+* <tt>@announce-stderr</tt> - See the stderr
+* <tt>@announce-dir</tt> - See the current directory
+* <tt>@announce-env</tt> - See environment variables set by PickledAruba
+* <tt>@announce</tt> - Does all of the above
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Aruba 2.3.0 Copyright (c) 2010 Aslak Hellesøy and David Chelimsky.  
+Pickled Aruba Copyright (c) 2010 Mike Bethany.  
+See LICENSE for details.
